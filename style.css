@@ -53,3 +53,158 @@
 }
 
 .whatsapp-link{font-weight:600}.whatsapp-link:hover{color:#7d5b58}
+
+/* Identidade visual Vélune */
+.logo{
+  display:flex;
+  align-items:center;
+  width:108px;
+  height:58px;
+  overflow:visible;
+}
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  filter:drop-shadow(0 4px 12px rgba(117,69,61,.10));
+  transition:transform .35s ease, filter .35s ease;
+}
+.logo:hover img{
+  transform:scale(1.04);
+  filter:drop-shadow(0 7px 18px rgba(117,69,61,.18));
+}
+.footer-logo{
+  width:135px;
+  height:78px;
+  display:flex;
+  align-items:center;
+}
+.footer-logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.hero-logo-mark{
+  position:absolute;
+  left:50%;
+  bottom:5%;
+  transform:translateX(-50%);
+  width:180px;
+  height:180px;
+  z-index:4;
+  pointer-events:none;
+  opacity:.92;
+  filter:drop-shadow(0 12px 30px rgba(44,15,14,.28));
+  animation:logoFloat 5s ease-in-out infinite;
+}
+.hero-logo-mark img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+@keyframes logoFloat{
+  0%,100%{transform:translateX(-50%) translateY(0) rotate(-1deg)}
+  50%{transform:translateX(-50%) translateY(-10px) rotate(1deg)}
+}
+@media(max-width:850px){
+  .logo{width:88px;height:52px}
+  .footer-logo{width:115px;height:68px}
+  .hero-logo-mark{width:125px;height:125px;bottom:3%}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-logo-mark{animation:none}
+}
+
+/* Logo Vélune retangular */
+.logo{
+  width:150px;
+  height:58px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  border-radius:4px;
+}
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  filter:none;
+  transform:none;
+}
+.logo:hover img{
+  transform:scale(1.015);
+  filter:brightness(1.04);
+}
+.hero-logo-mark{
+  width:min(720px, 72vw);
+  height:auto;
+  aspect-ratio:16/6.7;
+  left:50%;
+  bottom:6%;
+  border-radius:8px;
+  overflow:hidden;
+  opacity:.97;
+  animation:logoFloat 5s ease-in-out infinite;
+}
+.hero-logo-mark img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.footer-logo{
+  width:190px;
+  height:76px;
+  overflow:hidden;
+  border-radius:5px;
+}
+.footer-logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+@media(max-width:850px){
+  .logo{width:112px;height:48px}
+  .hero-logo-mark{width:88vw;bottom:4%}
+  .footer-logo{width:150px;height:62px}
+}
+
+/* Nova identidade Vélune: rosa muito claro */
+.logo img,
+.footer-logo img,
+.hero-logo-mark img{
+  object-fit:contain;
+}
+.logo{
+  background:#f9e9ec;
+}
+
+/* VÉLUNE — tema inspirado na logo enviada: preto profundo + rosé metálico */
+:root{--ink:#f7e9eb;--rose:#d79aa5;--rose2:#efc1c9;--cream:#191114;--line:#3a292e;--muted:#c5b1b5;--white:#fff;--site:#0d080b;--panel:#171014}
+html,body{background:var(--site);color:#f7e9eb}
+body{background:radial-gradient(circle at 15% 5%,rgba(160,91,105,.12),transparent 28%),radial-gradient(circle at 90% 20%,rgba(216,151,164,.09),transparent 24%),var(--site)}
+.header{background:rgba(13,8,11,.82);border-bottom:1px solid rgba(215,154,165,.2)}
+.logo{width:64px;height:64px;border-radius:50%;background:#0d080b;border:1px solid rgba(215,154,165,.55);box-shadow:0 8px 25px rgba(0,0,0,.35);overflow:hidden}
+.logo img{width:100%;height:100%;object-fit:cover;border-radius:50%;filter:none}
+.logo:hover img{transform:scale(1.06);filter:brightness(1.06)}
+.nav{color:#d9c7ca}.nav a:after{background:var(--rose)}
+.header-actions{display:flex;gap:8px;align-items:center}.header-btn{border-color:rgba(239,193,201,.5);color:#f7e9eb;background:rgba(255,255,255,.03)}.header-btn.secondary{border-color:#3a292e;color:#d8c3c7}
+.hero{background:linear-gradient(120deg,#0d080b 0%,#140b0f 52%,#221217 100%)}
+.hero-bg{background:#d78f9d;opacity:.13}.pill{color:#e1aab3}.pill span{background:var(--rose)}
+.hero h1,.section h2,.editorial h2,.ig-head h2,.catalog-hero h1{color:#fff}.hero h1 i,.section h2 i,.editorial h2 i,.statement h2 i,.ig-head h2 i,.catalog-hero h1 i{color:var(--rose2)}
+.hero-content>p,.section-top>p,.editorial-copy p,.catalog-hero p{color:var(--muted)}
+.btn-dark{background:#f2c0c8;color:#1a0f12}.btn-light{background:transparent;border-color:#5b3c43;color:#f7e9eb}.btn:hover{box-shadow:0 15px 35px rgba(215,154,165,.16)}
+.hero-side{border-color:#171014}.circle-stamp{background:#e8b4be;color:#180d10}.circle-stamp small{color:#3d2227}
+.ticker{background:#050304;color:#f8e9eb}.ticker span{color:var(--rose)}
+.section{background:transparent}.collection-card,.product{background:var(--panel);border-color:#3a292e}.overlay{background:linear-gradient(transparent 30%,#000d)}
+.card-copy span,.section-top small,.editorial small,.statement small,.ig-head small,.catalog-hero small,.product-info small{color:#d795a0}
+.editorial{background:#170f12}.editorial-copy{color:#fff}.underlink{border-color:#e4b6be}.statement{background:#050304}.statement-mark{border-color:#8e5963;color:#e5aeb8}
+.instagram{background:transparent}.ig-grid img{border:1px solid #2f2226}
+footer{background:#050304}.catalog-hero{background:radial-gradient(circle at 75% 20%,rgba(216,151,164,.2),transparent 30%),#0d080b}.filters{background:rgba(13,8,11,.92);border-bottom-color:#332329}.filters button{background:#171014;color:#e9dadd;border-color:#3a292e}.filters button.active,.filters button:hover{background:#f0bec7;color:#1b0e12;border-color:#f0bec7}
+.product-info h3{color:#fff}.product-info strong{color:#e9dadd}.product-info a{border-top-color:#3a292e}.product-info .direct-link{color:#f0b9c2}.product-info .whatsapp-link{color:#bfaeb2;border-top:0;padding-top:7px}
+.catalog-bottom{background:linear-gradient(135deg,#2a171d,#171014);border:1px solid #4b3037}.catalog-bottom h2{color:#fff}.catalog-bottom p{color:#c7b3b7}
+.footer-logo{width:78px;height:78px;border-radius:50%;overflow:hidden;border:1px solid rgba(215,154,165,.45)}.footer-logo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.hero-logo-mark{width:170px;height:170px;border-radius:50%;overflow:hidden;border:1px solid rgba(215,154,165,.45);background:#0d080b}.hero-logo-mark img{object-fit:cover;border-radius:50%}
+@media(max-width:850px){.logo{width:54px;height:54px}.nav{background:rgba(18,10,14,.98);border-color:#3a292e}.nav a{color:#eadcdf}.nav a:hover{background:#27171c}.hero{background:#0d080b}.footer-logo{width:70px;height:70px}.hero-logo-mark{width:120px;height:120px}.header-actions .secondary{display:none}}
