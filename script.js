@@ -38,6 +38,7 @@
   // Catalog filters with smooth show/hide.
   const buttons = document.querySelectorAll(".filters button");
   const products = document.querySelectorAll(".product");
+  const sectionTitles = document.querySelectorAll(".catalog-section-title");
 
   function applyFilter(cat) {
     buttons.forEach(btn => btn.classList.toggle("active", btn.dataset.cat === cat));
@@ -46,13 +47,18 @@
       card.classList.toggle("is-hidden", !show);
       if (show) requestAnimationFrame(() => card.classList.add("visible"));
     });
+    sectionTitles.forEach(title => {
+      const section = title.dataset.section;
+      const show = cat === "all" || (cat === "masculino" ? section === "masculino" : section === "feminino");
+      title.classList.toggle("is-hidden", !show);
+    });
   }
 
   if (buttons.length) {
     buttons.forEach(btn => btn.addEventListener("click", () => applyFilter(btn.dataset.cat)));
 
     const hash = window.location.hash.replace("#", "");
-    const valid = ["intimas", "joias", "pijamas", "fitness"];
+    const valid = ["intimas", "joias", "pijamas", "fitness", "masculino"];
     if (valid.includes(hash)) {
       applyFilter(hash);
       setTimeout(() => document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "start" }), 100);

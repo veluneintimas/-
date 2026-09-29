@@ -208,3 +208,13 @@ footer{background:#050304}.catalog-hero{background:radial-gradient(circle at 75%
 .footer-logo{width:78px;height:78px;border-radius:50%;overflow:hidden;border:1px solid rgba(215,154,165,.45)}.footer-logo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
 .hero-logo-mark{width:170px;height:170px;border-radius:50%;overflow:hidden;border:1px solid rgba(215,154,165,.45);background:#0d080b}.hero-logo-mark img{object-fit:cover;border-radius:50%}
 @media(max-width:850px){.logo{width:54px;height:54px}.nav{background:rgba(18,10,14,.98);border-color:#3a292e}.nav a{color:#eadcdf}.nav a:hover{background:#27171c}.hero{background:#0d080b}.footer-logo{width:70px;height:70px}.hero-logo-mark{width:120px;height:120px}.header-actions .secondary{display:none}}
+
+
+/* Separação visual correta das coleções */
+.catalog-section-title{grid-column:1/-1;display:flex;align-items:end;gap:22px;padding:18px 4px 4px;margin-top:10px;border-bottom:1px solid #3a292e}
+.catalog-section-title span{font:500 12px "DM Sans";color:#d795a0;letter-spacing:.18em;padding-bottom:8px}
+.catalog-section-title small{font-size:9px;letter-spacing:.22em;color:#d795a0}
+.catalog-section-title h2{margin:5px 0 2px;font:500 38px "Playfair Display";color:#fff}
+.catalog-section-title p{margin:0 0 10px;color:#bfaeb2;font-size:12px}
+.catalog-section-title.is-hidden{display:none}
+@media(max-width:850px){.catalog-section-title{gap:14px}.catalog-section-title h2{font-size:32px}.catalog-section-title p{font-size:11px}}
